@@ -1,998 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>$ZEROTH — Layer -1 · One Below Layer 0</title>
-<meta property="og:title" content="$ZEROTH — The Most Honest Crypto Project Ever">
-<meta property="og:description" content="We have no product. We are fundraising anyway. $5 from 8,000 humans = $40,000. This is the way.">
-<meta property="og:image" content="https://og-image-zeroth.vercel.app/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="$ZEROTH — Layer -1 · One Below Layer 0">
-<meta name="twitter:description" content="We watched vibe-based water tokens raise $40M. We said: hold on. We can do this too. Except honest. And for $40K. And for nothing.">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --cream: #fdf8f0;
-  --warm: #fef3e2;
-  --orange: #f97316;
-  --orange-light: #fed7aa;
-  --yellow: #fbbf24;
-  --yellow-light: #fef9c3;
-  --green: #22c55e;
-  --green-light: #dcfce7;
-  --blue: #3b82f6;
-  --blue-light: #dbeafe;
-  --purple: #8b5cf6;
-  --purple-light: #ede9fe;
-  --red: #ef4444;
-  --red-light: #fee2e2;
-  --ink: #1a1a2e;
-  --ink2: #374151;
-  --muted: #9ca3af;
-  --border: #e5e7eb;
-  --white: #ffffff;
-  --shadow: 0 4px 24px rgba(0,0,0,0.08);
-  --shadow-hover: 0 12px 40px rgba(0,0,0,0.15);
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
-body { background:var(--cream); color:var(--ink); font-family:'Bricolage Grotesque',sans-serif; overflow-x:hidden; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Layer -1. We have literally nothing. Raising $40k anyway. The most honest crypto project ever. $5 to join the vibes.">
+  <title>$ZEROTH — Layer -1 · One Below Layer 0</title>
+  
+  <meta property="og:title" content="$ZEROTH — The Most Honest Crypto Project Ever">
+  <meta property="og:description" content="We watched projects raise millions for tokenized water. So I made Layer -1. $5 entry. 0 products. ∞ vibes. Be first.">
+  <meta property="og:url" content="https://zerothlayer-1.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
 
-/* TICKER */
-.ticker-wrap { background:var(--ink); color:var(--yellow); font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:1px; padding:10px 0; overflow:hidden; white-space:nowrap; position:sticky; top:0; z-index:100; border-bottom:2px solid var(--orange); }
-.ticker-inner { display:inline-block; animation:tickerMove 40s linear infinite; }
-@keyframes tickerMove { from { transform:translateX(0); } to { transform:translateX(-50%); } }
-
-/* NAV */
-nav { background:rgba(253,248,240,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:14px 32px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:40px; z-index:99; }
-.nav-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:22px; color:var(--ink); display:flex; align-items:center; gap:8px; }
-.nav-badge { background:var(--orange); color:white; font-size:11px; padding:3px 8px; border-radius:20px; font-weight:700; letter-spacing:1px; }
-.nav-links { display:flex; gap:24px; font-size:14px; font-weight:500; }
-.nav-links a { text-decoration:none; color:var(--ink2); transition:color 0.2s; }
-.nav-links a:hover { color:var(--orange); }
-.nav-cta { background:var(--ink); color:white; font-size:13px; font-weight:700; padding:10px 22px; border-radius:8px; text-decoration:none; transition:all 0.2s; }
-.nav-cta:hover { background:var(--orange); transform:translateY(-1px); }
-
-/* HERO */
-.hero { position:relative; padding:80px 32px 60px; text-align:center; overflow:hidden; background:linear-gradient(160deg, #fff9f0 0%, #fef3e2 40%, #fdf4ff 70%, #f0f9ff 100%); }
-.blob { position:absolute; border-radius:50%; filter:blur(60px); opacity:0.4; animation:blobFloat 8s ease-in-out infinite; pointer-events:none; }
-.blob-1 { width:400px; height:400px; background:#fed7aa; top:-100px; left:-100px; animation-delay:0s; }
-.blob-2 { width:300px; height:300px; background:#ddd6fe; top:-50px; right:-50px; animation-delay:2s; }
-.blob-3 { width:250px; height:250px; background:#bbf7d0; bottom:-50px; left:30%; animation-delay:4s; }
-.blob-4 { width:200px; height:200px; background:#bfdbfe; bottom:0; right:10%; animation-delay:1s; }
-@keyframes blobFloat { 0%,100%{transform:translate(0,0)scale(1);} 33%{transform:translate(20px,-20px)scale(1.05);} 66%{transform:translate(-15px,15px)scale(0.97);} }
-
-.float-emoji { position:absolute; animation:emojiFloat 6s ease-in-out infinite; opacity:0.55; user-select:none; }
-.fe-1{top:15%;left:5%;font-size:40px;animation-delay:0s;}
-.fe-2{top:20%;right:6%;font-size:36px;animation-delay:1s;}
-.fe-3{top:60%;left:3%;font-size:28px;animation-delay:2s;}
-.fe-4{top:65%;right:4%;font-size:34px;animation-delay:.5s;}
-.fe-5{top:35%;left:9%;font-size:24px;animation-delay:3s;}
-.fe-6{top:45%;right:9%;font-size:30px;animation-delay:1.5s;}
-@keyframes emojiFloat { 0%,100%{transform:translateY(0)rotate(0deg);} 50%{transform:translateY(-16px)rotate(8deg);} }
-
-.hero-eyebrow { display:inline-flex; align-items:center; gap:8px; background:white; border:1px solid var(--orange-light); border-radius:20px; padding:6px 18px; font-size:13px; font-weight:600; color:var(--orange); margin-bottom:28px; box-shadow:0 2px 12px rgba(249,115,22,0.12); position:relative; z-index:1; }
-.live-dot { width:8px; height:8px; background:var(--green); border-radius:50%; animation:livePulse 1.5s ease-in-out infinite; }
-@keyframes livePulse { 0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.5);} 50%{box-shadow:0 0 0 6px rgba(34,197,94,0);} }
-
-.hero-title { font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(64px,13vw,140px); line-height:0.9; position:relative; z-index:1; letter-spacing:-3px; color:var(--ink); }
-.hero-title .accent { background:linear-gradient(135deg, var(--orange) 0%, #ec4899 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-.hero-subtitle { font-family:'JetBrains Mono',monospace; font-size:clamp(12px,2vw,16px); color:var(--muted); letter-spacing:3px; text-transform:uppercase; margin-top:16px; position:relative; z-index:1; }
-.hero-desc { max-width:580px; margin:24px auto 0; font-size:17px; color:var(--ink2); line-height:1.75; position:relative; z-index:1; }
-
-.hero-stats { display:flex; justify-content:center; gap:14px; margin-top:48px; flex-wrap:wrap; position:relative; z-index:1; }
-.stat-pill { background:white; border:1px solid var(--border); border-radius:14px; padding:16px 22px; text-align:center; box-shadow:var(--shadow); transition:all 0.3s; min-width:120px; }
-.stat-pill:hover { transform:translateY(-4px); box-shadow:var(--shadow-hover); }
-.stat-num { font-family:'Syne',sans-serif; font-size:28px; font-weight:800; line-height:1; }
-.stat-label { font-size:11px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; margin-top:4px; font-weight:600; }
-
-/* MATH BANNER */
-.math-banner { background:linear-gradient(135deg, var(--orange) 0%, #f59e0b 100%); padding:40px 32px; text-align:center; position:relative; overflow:hidden; }
-.math-banner-text { font-family:'Syne',sans-serif; font-size:clamp(22px,4vw,44px); font-weight:800; color:white; position:relative; z-index:1; text-shadow:0 2px 12px rgba(0,0,0,0.15); }
-.math-banner-sub { font-size:15px; color:rgba(255,255,255,0.85); margin-top:8px; position:relative; z-index:1; }
-
-/* SECTIONS */
-.section { max-width:1000px; margin:0 auto; padding:80px 32px; }
-.section-eyebrow { display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--orange); background:#fed7aa55; border:1px solid var(--orange-light); padding:5px 14px; border-radius:20px; margin-bottom:14px; font-weight:700; }
-.section-title { font-family:'Syne',sans-serif; font-size:clamp(32px,5vw,52px); font-weight:800; line-height:1.1; letter-spacing:-1px; color:var(--ink); margin-bottom:10px; }
-.section-sub { font-size:16px; color:var(--muted); max-width:520px; line-height:1.7; margin-bottom:36px; }
-.bg-warm { background:linear-gradient(180deg, #fff9f0 0%, #fef3e2 100%); }
-.bg-cool { background:linear-gradient(180deg, #f8faff 0%, #f0f4ff 100%); }
-.bg-white { background:#ffffff; }
-
-/* STORY */
-.story-layout { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
-@media(max-width:700px){.story-layout{grid-template-columns:1fr;}}
-.story-illustration { background:linear-gradient(135deg,#fff9f0,#fef3e2); border:2px solid var(--orange-light); border-radius:24px; padding:32px; text-align:center; }
-.story-big-emoji { font-size:90px; line-height:1; display:block; animation:wobble 3s ease-in-out infinite; }
-@keyframes wobble { 0%,100%{transform:rotate(-5deg)scale(1);} 50%{transform:rotate(5deg)scale(1.05);} }
-.story-caption { margin-top:12px; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--orange); letter-spacing:1px; }
-.story-event-list { display:flex; flex-direction:column; gap:8px; margin-top:16px; }
-.sev-item { background:white; border-radius:12px; padding:12px 14px; font-size:13px; color:var(--ink2); text-align:left; border:1px solid var(--border); display:flex; align-items:center; gap:10px; }
-.sev-item.highlight { background:linear-gradient(135deg,#fed7aa,#fef3e2); border-color:#fed7aa; font-weight:700; color:#9a3412; }
-.story-text p { font-size:16px; line-height:1.85; color:var(--ink2); margin-bottom:18px; }
-.callout { background:#fef9c3; border-left:4px solid var(--yellow); border-radius:0 12px 12px 0; padding:14px 18px; font-size:15px; font-weight:600; color:#92400e; margin:18px 0; }
-
-/* PROGRESS */
-.progress-card { background:white; border:2px solid var(--border); border-radius:24px; padding:40px; box-shadow:var(--shadow); text-align:center; }
-.raise-big { font-family:'Syne',sans-serif; font-size:72px; font-weight:800; color:var(--orange); line-height:1; letter-spacing:-2px; }
-.raise-sub { font-size:14px; color:var(--muted); margin-top:4px; font-weight:500; }
-.progress-bar-wrap { background:var(--border); border-radius:50px; height:20px; margin:28px 0 10px; overflow:hidden; position:relative; }
-.progress-bar-fill { height:100%; background:linear-gradient(90deg, var(--orange), var(--yellow)); border-radius:50px; width:0%; transition:width 2s cubic-bezier(0.34,1.56,0.64,1); position:relative; }
-.progress-bar-fill::after { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%); animation:shimmer 2s infinite; border-radius:50px; }
-@keyframes shimmer { 0%{transform:translateX(-100%);} 100%{transform:translateX(400%);} }
-.progress-labels { display:flex; justify-content:space-between; font-size:12px; font-family:'JetBrains Mono',monospace; color:var(--muted); }
-.math-trio { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:24px; }
-.math-card { background:var(--cream); border:1px solid var(--border); border-radius:14px; padding:18px 12px; text-align:center; }
-.math-icon { font-size:26px; margin-bottom:6px; }
-.math-num { font-family:'Syne',sans-serif; font-size:26px; font-weight:800; color:var(--ink); line-height:1; }
-.math-label { font-size:11px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; margin-top:4px; font-weight:600; }
-
-/* LIVE STATUS BADGE */
-.live-status { display:inline-flex; align-items:center; gap:8px; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:20px; padding:6px 16px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#16a34a; font-weight:700; margin-bottom:18px; letter-spacing:1px; }
-.live-status.loading { background:#fef9c3; border-color:#fde047; color:#a16207; }
-.live-status.error { background:#fee2e2; border-color:#fca5a5; color:#dc2626; }
-.refresh-time { font-size:11px; color:var(--muted); font-family:'JetBrains Mono',monospace; margin-top:10px; }
-
-/* SHARE BUTTON */
-.share-row { display:flex; justify-content:center; gap:12px; margin-top:28px; flex-wrap:wrap; }
-.share-btn { display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:10px; font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; cursor:pointer; border:none; transition:all 0.2s; letter-spacing:0.5px; text-decoration:none; }
-.share-x { background:#000; color:white; }
-.share-x:hover { background:#333; transform:translateY(-2px); }
-.share-copy { background:var(--cream); color:var(--ink); border:1.5px solid var(--border); }
-.share-copy:hover { background:white; border-color:var(--orange); color:var(--orange); transform:translateY(-2px); }
-
-/* BREAKDOWN PILLS */
-.breakdown-row { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:18px; }
-.bp { background:var(--cream); border:1px solid var(--border); border-radius:12px; padding:8px 14px; font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; color:var(--ink2); display:flex; align-items:center; gap:6px; }
-.bp-dot { width:8px; height:8px; border-radius:50%; }
-
-/* TOKENOMICS */
-.toko-grid { display:flex; flex-direction:column; gap:10px; }
-.toko-card { background:white; border:1.5px solid var(--border); border-radius:16px; padding:16px 20px; display:grid; grid-template-columns:52px 1fr auto auto; align-items:center; gap:14px; transition:all 0.25s; cursor:default; }
-.toko-card:hover { border-color:var(--orange); box-shadow:0 4px 20px rgba(249,115,22,0.1); transform:translateX(4px); }
-.toko-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; flex-shrink:0; }
-.toko-name { font-weight:700; font-size:15px; color:var(--ink); }
-.toko-real { font-size:12px; color:var(--muted); margin-top:2px; }
-.toko-pct { font-family:'Syne',sans-serif; font-size:26px; font-weight:800; color:var(--ink); text-align:right; }
-.toko-amt { font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; text-align:right; white-space:nowrap; background:var(--green-light); color:#166534; padding:4px 10px; border-radius:20px; }
-
-/* TECH ANALYSIS */
-.ta-layout { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-@media(max-width:640px){.ta-layout{grid-template-columns:1fr;}}
-.ta-card { background:white; border:1.5px solid var(--border); border-radius:20px; padding:24px; transition:all 0.25s; }
-.ta-card:hover { box-shadow:var(--shadow-hover); transform:translateY(-2px); }
-.ta-card-head { display:flex; align-items:center; gap:10px; margin-bottom:18px; padding-bottom:14px; border-bottom:1px solid var(--border); }
-.ta-icon { font-size:26px; }
-.ta-card-title { font-family:'Syne',sans-serif; font-weight:700; font-size:16px; color:var(--ink); }
-.ta-row { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px dashed var(--border); font-size:13px; }
-.ta-row:last-child { border-bottom:none; }
-.ta-key { color:var(--muted); font-weight:500; }
-.ta-val { font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; }
-.v-green{color:#16a34a;} .v-red{color:#dc2626;} .v-orange{color:var(--orange);} .v-purple{color:var(--purple);}
-
-/* PRICE CHART */
-.price-chart { background:white; border:1.5px solid var(--border); border-radius:20px; padding:28px; grid-column:1/-1; }
-.price-chart-title { font-family:'Syne',sans-serif; font-weight:700; font-size:18px; margin-bottom:22px; display:flex; align-items:center; gap:10px; }
-.chart-area { height:160px; position:relative; }
-.chart-svg { width:100%; height:100%; }
-.chart-days { display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted); padding:6px 4px 0; }
-.chart-events { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-top:18px; }
-@media(max-width:640px){.chart-events{grid-template-columns:1fr 1fr;}}
-.ce-card { background:var(--cream); border-radius:12px; padding:12px; text-align:center; border:1px solid var(--border); }
-.ce-emoji { font-size:20px; }
-.ce-day { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); margin:4px 0; }
-.ce-txt { font-size:11px; color:var(--ink2); font-weight:600; line-height:1.3; }
-
-/* ROADMAP */
-.roadmap-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; }
-.rm-card { background:white; border:1.5px solid var(--border); border-radius:20px; padding:24px; position:relative; transition:all 0.25s; overflow:hidden; }
-.rm-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; border-radius:20px 20px 0 0; }
-.rm-card:nth-child(1)::before{background:linear-gradient(90deg,var(--orange),var(--yellow));}
-.rm-card:nth-child(2)::before{background:linear-gradient(90deg,var(--purple),#ec4899);}
-.rm-card:nth-child(3)::before{background:linear-gradient(90deg,var(--blue),var(--purple));}
-.rm-card:nth-child(4)::before{background:linear-gradient(90deg,var(--red),var(--orange));}
-.rm-card:nth-child(5)::before{background:linear-gradient(90deg,var(--green),var(--blue));}
-.rm-card:nth-child(6)::before{background:linear-gradient(90deg,#94a3b8,var(--ink));}
-.rm-card:nth-child(7)::before{background:linear-gradient(90deg,#ec4899,var(--purple));}
-.rm-card:hover { box-shadow:var(--shadow-hover); transform:translateY(-4px); }
-.rm-emoji { font-size:34px; margin-bottom:10px; }
-.rm-quarter { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted); letter-spacing:2px; margin-bottom:6px; text-transform:uppercase; }
-.rm-title { font-weight:700; font-size:16px; color:var(--ink); margin-bottom:8px; }
-.rm-desc { font-size:13px; color:var(--ink2); line-height:1.6; }
-
-/* TEAM */
-.team-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
-.team-card { background:white; border:1.5px solid var(--border); border-radius:24px; padding:28px 22px; text-align:center; transition:all 0.25s; }
-.team-card:hover { box-shadow:var(--shadow-hover); transform:translateY(-4px); }
-.team-av { width:88px; height:88px; margin:0 auto 14px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:48px; }
-.team-card:nth-child(1) .team-av{background:linear-gradient(135deg,#fed7aa,#fef3e2);}
-.team-card:nth-child(2) .team-av{background:linear-gradient(135deg,#ddd6fe,#ede9fe);}
-.team-card:nth-child(3) .team-av{background:linear-gradient(135deg,#bbf7d0,#dcfce7);}
-.team-card:nth-child(4) .team-av{background:linear-gradient(135deg,#bfdbfe,#dbeafe);}
-.team-name { font-family:'Syne',sans-serif; font-weight:800; font-size:18px; color:var(--ink); }
-.team-role { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--orange); letter-spacing:2px; text-transform:uppercase; margin:6px 0 12px; font-weight:700; }
-.team-bio { font-size:13px; color:var(--muted); line-height:1.65; }
-.team-tag { display:inline-block; margin-top:12px; background:var(--cream); border:1px solid var(--border); border-radius:20px; padding:4px 12px; font-size:11px; font-weight:600; color:var(--ink2); }
-
-/* RISK */
-.risk-table-wrap { background:white; border:1.5px solid var(--border); border-radius:20px; overflow:hidden; box-shadow:var(--shadow); }
-.risk-table { width:100%; border-collapse:collapse; font-size:14px; }
-.risk-table thead { background:var(--ink); }
-.risk-table th { padding:14px 20px; text-align:left; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--yellow); font-weight:700; }
-.risk-table td { padding:14px 20px; border-bottom:1px solid var(--border); vertical-align:middle; color:var(--ink2); }
-.risk-table tr:last-child td { border-bottom:none; }
-.risk-table tr:hover td { background:var(--cream); }
-.risk-badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.5px; font-family:'JetBrains Mono',monospace; }
-.rb-high{background:#fee2e2;color:#dc2626;} .rb-extreme{background:#fecaca;color:#991b1b;} .rb-medium{background:#fef9c3;color:#a16207;} .rb-certain{background:var(--ink);color:var(--yellow);}
-
-/* DONATE */
-.donate-bg { background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%); position:relative; overflow:hidden; }
-.donate-bg::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 20% 50%,rgba(249,115,22,0.15) 0%,transparent 40%),radial-gradient(circle at 80% 20%,rgba(139,92,246,0.15) 0%,transparent 40%); }
-.donate-float { position:absolute; font-size:60px; opacity:0.06; user-select:none; animation:dfloat 10s ease-in-out infinite; }
-.df-1{top:10%;left:5%;animation-delay:0s;} .df-2{top:50%;right:5%;animation-delay:2s;} .df-3{bottom:10%;left:45%;animation-delay:4s;}
-@keyframes dfloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);}}
-.donate-inner { position:relative; z-index:1; max-width:900px; margin:0 auto; padding:80px 32px; }
-.donate-headline { font-family:'Syne',sans-serif; font-size:clamp(36px,6vw,64px); font-weight:800; color:white; text-align:center; line-height:1.1; letter-spacing:-1px; margin-bottom:12px; }
-.donate-headline .ya { color:var(--yellow); }
-.donate-sub { text-align:center; color:rgba(255,255,255,0.6); font-size:16px; margin-bottom:44px; max-width:480px; margin-left:auto; margin-right:auto; }
-
-.wallet-tabs { display:flex; gap:8px; margin-bottom:18px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:6px; width:fit-content; flex-wrap:wrap; }
-.tab-btn { font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; padding:10px 22px; border:none; background:transparent; color:rgba(255,255,255,0.5); cursor:pointer; border-radius:8px; transition:all 0.2s; letter-spacing:1px; }
-.tab-btn.active,.tab-btn:hover { background:white; color:var(--ink); }
-
-.wallet-panel { display:none; }
-.wallet-panel.active { display:block; animation:panelIn 0.3s ease; }
-@keyframes panelIn { from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);} }
-
-.wallet-box { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:20px; padding:32px; display:flex; gap:28px; align-items:center; flex-wrap:wrap; backdrop-filter:blur(10px); }
-.qr-frame { background:white; border-radius:16px; padding:14px; width:110px; height:110px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:60px; line-height:1; overflow:hidden; }
-.qr-frame svg { width:70px; height:70px; }
-.wallet-info { flex:1; min-width:200px; }
-.w-chain { font-family:'Syne',sans-serif; font-size:26px; font-weight:800; color:white; margin-bottom:4px; }
-.w-network { font-size:13px; color:rgba(255,255,255,0.5); margin-bottom:14px; }
-.w-addr { background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px 16px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--yellow); word-break:break-all; line-height:1.6; margin-bottom:14px; }
-.copy-btn { background:var(--orange); color:white; border:none; border-radius:10px; padding:12px 28px; font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; cursor:pointer; transition:all 0.2s; letter-spacing:1px; }
-.copy-btn:hover { background:var(--yellow); color:var(--ink); transform:translateY(-2px); }
-.copy-btn.copied { background:var(--green); }
-
-.disclaimer { background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.2); border-radius:16px; padding:20px 24px; margin-top:28px; font-size:12px; color:rgba(255,255,255,0.45); font-family:'JetBrains Mono',monospace; line-height:1.8; }
-.disclaimer strong { color:#fca5a5; }
-
-/* CONFETTI */
-#confetti-canvas { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9998; display:none; }
-
-/* FOOTER */
-footer { background:var(--ink); color:rgba(255,255,255,0.5); text-align:center; padding:48px 32px; }
-.footer-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:36px; color:white; margin-bottom:6px; letter-spacing:-1px; }
-.footer-tagline { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:var(--orange); text-transform:uppercase; margin-bottom:16px; }
-.footer-note { font-size:12px; color:rgba(255,255,255,0.2); margin-top:18px; font-family:'JetBrains Mono',monospace; }
-
-@media(max-width:640px){
-  nav .nav-links{display:none;}
-  nav { justify-content: space-between; gap: 12px; }
-  .math-trio{grid-template-columns:1fr 1fr;}
-  .toko-card{grid-template-columns:44px 1fr;}
-  .toko-pct,.toko-amt{display:none;}
-  .raise-big { font-size: 48px; }
-}
-</style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    body { font-family: 'VT323', monospace; }
+  </style>
 </head>
-<body>
-<canvas id="confetti-canvas"></canvas>
+<body class="bg-black text-lime-400 min-h-screen">
 
-<!-- TICKER -->
-<div class="ticker-wrap">
-  <span class="ticker-inner" id="ticker-text">
-    $ZEROTH &nbsp;🟢 PRESALE LIVE (PROBABLY) &nbsp;•&nbsp; TVL: $0.00 &nbsp;•&nbsp; WHITEPAPER: 94 PAGES / 0 SUBSTANCE &nbsp;•&nbsp; AUDIT: AUDITOR ALSO CONFUSED &nbsp;•&nbsp; RAISED: <span id="ticker-raised">CALCULATING...</span> &nbsp;•&nbsp; VIBE: IMMACULATE &nbsp;•&nbsp; RSI: OVERSOLD SINCE BIRTH &nbsp;•&nbsp; ROADMAP: Q4 2027 (PENDING) &nbsp;•&nbsp; PARTNERSHIPS: READ: ✓ REPLIED: ✗ &nbsp;•&nbsp; V2: NOT COMING &nbsp;•&nbsp; COMMUNITY: 47 WALLETS, SAME PERSON &nbsp;•&nbsp; LAYER -1 CONFIRMED &nbsp;•&nbsp; GLOBAL PRESALE: ALL TIMEZONES WELCOME, ALL WILL LOSE EQUALLY &nbsp;•&nbsp; TEAM: 1 PERSON, 6 JOB TITLES &nbsp;•&nbsp; TOTAL ADDRESSABLE MARKET: EVERYONE WITH $5 AND WIFI &nbsp;•&nbsp;
-    $ZEROTH &nbsp;🟢 PRESALE LIVE (PROBABLY) &nbsp;•&nbsp; TVL: $0.00 &nbsp;•&nbsp; WHITEPAPER: 94 PAGES / 0 SUBSTANCE &nbsp;•&nbsp; AUDIT: AUDITOR ALSO CONFUSED &nbsp;•&nbsp; RAISED: <span id="ticker-raised-2">CALCULATING...</span> &nbsp;•&nbsp; VIBE: IMMACULATE &nbsp;•&nbsp; RSI: OVERSOLD SINCE BIRTH &nbsp;•&nbsp; ROADMAP: Q4 2027 (PENDING) &nbsp;•&nbsp; PARTNERSHIPS: READ: ✓ REPLIED: ✗ &nbsp;•&nbsp; V2: NOT COMING &nbsp;•&nbsp; COMMUNITY: 47 WALLETS, SAME PERSON &nbsp;•&nbsp; LAYER -1 CONFIRMED &nbsp;•&nbsp; GLOBAL PRESALE: ALL TIMEZONES WELCOME, ALL WILL LOSE EQUALLY &nbsp;•&nbsp; TEAM: 1 PERSON, 6 JOB TITLES &nbsp;•&nbsp; TOTAL ADDRESSABLE MARKET: EVERYONE WITH $5 AND WIFI &nbsp;•&nbsp;
-  </span>
-</div>
+  <div class="max-w-4xl mx-auto px-6 py-12 text-center border-b-4 border-lime-400">
+    <div class="flex justify-center gap-4 text-6xl mb-6">🟢 📉 🌑</div>
+    <h1 class="text-6xl md:text-7xl font-bold tracking-widest mb-4">$ZEROTH</h1>
+    <p class="text-3xl md:text-4xl mb-8">Layer -1 · One Below Layer 0</p>
+    
+    <div class="inline-flex items-center gap-3 bg-black border-2 border-lime-400 px-8 py-3 text-2xl mb-8">
+      <span class="animate-pulse">PRESALE LIVE — REAL BALANCES FETCHING</span>
+      <span class="text-3xl">🟢</span>
+    </div>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">
-    <span>$ZEROTH</span>
-    <span class="nav-badge">LAYER -1</span>
+    <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-xl mb-12">
+      <div>TVL: Still $0 until you send</div>
+      <div>RAISED: <span id="raised" class="text-white">$0.00</span></div>
+      <div>COMMUNITY: 47 wallets, same person</div>
+      <div>TEAM: 1 person, 6 job titles</div>
+      <div>VIBE: IMMACULATE</div>
+    </div>
+
+    <a href="https://x.com/The869Guy" target="_blank" class="inline-flex items-center gap-2 bg-lime-400 text-black px-8 py-4 text-3xl hover:bg-white transition-all">
+      <i class="fa-brands fa-x-twitter"></i> MADE BY @The869Guy
+    </a>
   </div>
-  <div class="nav-links">
-    <a href="#story">Story</a>
-    <a href="#tokenomics">Tokenomics</a>
-    <a href="#analysis">Analysis</a>
-    <a href="#team">Team</a>
-    <a href="#donate">Donate $5</a>
-  </div>
-  <a href="#donate" class="nav-cta">💸 Fund This</a>
-</nav>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
-  <div class="blob blob-4"></div>
-  <div class="float-emoji fe-1">🚀</div>
-  <div class="float-emoji fe-2">📈</div>
-  <div class="float-emoji fe-3">🌕</div>
-  <div class="float-emoji fe-4">💎</div>
-  <div class="float-emoji fe-5">🤝</div>
-  <div class="float-emoji fe-6">🧠</div>
+  <div class="max-w-4xl mx-auto px-6 py-12 space-y-16">
 
-  <div class="hero-eyebrow"><span class="live-dot"></span> Presale Open — Probably</div>
-  <div class="hero-title">$<span class="accent">ZEROTH</span></div>
-  <div class="hero-subtitle">Layer -1 · One Below Layer 0</div>
-  <p class="hero-desc">
-    We watched startups raise <strong>$40 million for vibe-based water tokens.</strong><br>
-    We said — hold on. We can do this too.<br>
-    Meet <strong>$ZEROTH</strong>: not Layer 0, not Layer 1 — <em>Layer -1</em>. One level below the bottom. The most honest crypto project ever. We literally have nothing. And we're fundraising anyway.
-  </p>
+    <!-- FUNDING STATUS — REAL-TIME -->
+    <div class="bg-zinc-950 border border-lime-400 p-8 rounded-3xl">
+      <h2 class="text-4xl mb-6 flex items-center gap-3"><span class="text-5xl">📊</span> Funding Status — REAL-TIME</h2>
+      <div class="text-center">
+        <div class="text-7xl font-bold text-white mb-2" id="raised-big">$0.00</div>
+        <div class="text-2xl mb-6">of $40,000 • <span id="believers" class="text-lime-300">0 believers</span></div>
+        
+        <div class="w-full bg-zinc-900 h-6 rounded-full overflow-hidden mb-8">
+          <div id="progress" class="h-full bg-lime-400 w-0 transition-all duration-1000"></div>
+        </div>
+        
+        <p class="text-xl">Auto-refreshing every 15s • ETH / BNB / SOL / BTC</p>
+        <p id="last-updated" class="text-sm opacity-70 mt-2">Last updated: just now</p>
+      </div>
+    </div>
 
-  <div class="hero-stats">
-    <div class="stat-pill"><div class="stat-num" style="color:var(--orange)">$40K</div><div class="stat-label">Raise Target</div></div>
-    <div class="stat-pill"><div class="stat-num" style="color:var(--green)">$5</div><div class="stat-label">Per Believer</div></div>
-    <div class="stat-pill"><div class="stat-num" style="color:var(--blue)">8,000</div><div class="stat-label">People Needed</div></div>
-    <div class="stat-pill"><div class="stat-num" style="color:var(--red)">0</div><div class="stat-label">Products Built</div></div>
-    <div class="stat-pill"><div class="stat-num" style="color:var(--purple)">∞</div><div class="stat-label">Vibes</div></div>
-  </div>
-</div>
+    <!-- DONATE -->
+    <div class="border-4 border-lime-400 rounded-3xl p-10">
+      <h2 class="text-5xl text-center mb-10">SEND $5 HERE → JOIN THE NOTHING</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-zinc-950 p-6 rounded-2xl">
+          <div class="flex justify-between items-center mb-4">
+            <div class="text-3xl">Ethereum / BNB Smart Chain</div>
+            <button onclick="copyAddress('0x02e82B5095907772EBD09503645d209e281aaD05')" class="flex items-center gap-2 bg-lime-400 hover:bg-white text-black px-6 py-3 rounded-xl transition-all">
+              <i class="fa-solid fa-copy"></i> COPY
+            </button>
+          </div>
+          <code class="block bg-black p-4 rounded-xl text-sm break-all">0x02e82B5095907772EBD09503645d209e281aaD05</code>
+        </div>
 
-<!-- MATH BANNER -->
-<div class="math-banner">
-  <div class="math-banner-text">8,000 Humans × $5 = $40,000 🎉</div>
-  <div class="math-banner-sub">Less than one overpriced coffee that was spelled wrong. From anywhere on Earth. In any currency. We did the math so you don't have to.</div>
-</div>
+        <div class="bg-zinc-950 p-6 rounded-2xl">
+          <div class="flex justify-between items-center mb-4">
+            <div class="text-3xl">Bitcoin (BTC)</div>
+            <button onclick="copyAddress('bc1qk3uqm3kraksn42hx7fuhmrch0nhecwenjhgwja')" class="flex items-center gap-2 bg-lime-400 hover:bg-white text-black px-6 py-3 rounded-xl transition-all">
+              <i class="fa-solid fa-copy"></i> COPY
+            </button>
+          </div>
+          <code class="block bg-black p-4 rounded-xl text-sm break-all">bc1qk3uqm3kraksn42hx7fuhmrch0nhecwenjhgwja</code>
+        </div>
 
-<!-- STORY -->
-<div class="bg-warm" id="story">
-  <div class="section">
-    <div class="section-eyebrow">🔍 The Origin Story</div>
-    <div class="story-layout">
-      <div class="story-illustration">
-        <span class="story-big-emoji">🤯</span>
-        <div class="story-caption">// FOUNDER.EXE — STATUS: INSPIRED</div>
-        <div class="story-event-list">
-          <div class="sev-item">💧 <span><strong>AquaDAO</strong> raises $8M to tokenize <em>the concept of water</em></span></div>
-          <div class="sev-item">😴 <span><strong>SleepFi</strong> raises $12M to earn yield while <em>unconscious</em></span></div>
-          <div class="sev-item">🐕 <span><strong>DogDAO</strong> raises $24M to <em>decentralize dog treats</em></span></div>
-          <div class="sev-item">🍞 <span><strong>BreadProtocol</strong> raises $6M for <em>on-chain sourdough</em></span></div>
-          <div class="sev-item highlight">🙋‍♂️ <span>Me: "<strong>I ALSO WANT $40,000</strong>"</span></div>
+        <div class="bg-zinc-950 p-6 rounded-2xl">
+          <div class="flex justify-between items-center mb-4">
+            <div class="text-3xl">Solana (SOL)</div>
+            <button onclick="copyAddress('DfJpmHs9gRyJALsJBAh5xYkTBgaZJMVV8dTRR5aLfF9E')" class="flex items-center gap-2 bg-lime-400 hover:bg-white text-black px-6 py-3 rounded-xl transition-all">
+              <i class="fa-solid fa-copy"></i> COPY
+            </button>
+          </div>
+          <code class="block bg-black p-4 rounded-xl text-sm break-all">DfJpmHs9gRyJALsJBAh5xYkTBgaZJMVV8dTRR5aLfF9E</code>
         </div>
       </div>
-      <div class="story-text">
-        <div class="section-title">How I <span style="color:var(--orange)">Cracked</span> the Code</div>
-        <p>It started innocently. I was just a regular person on the internet, watching project after project raise <strong>$4 million, $40 million, sometimes $400 million</strong> — for things like "AI-powered decentralized dog food delivery on Solana."</p>
-        <div class="callout">💡 Every whitepaper was 89 pages. Every page said "ecosystem." The word "product" appeared zero times.</div>
-        <p>I read one whitepaper for <em>six hours</em>. I highlighted things. I made notes. At the end, I genuinely could not tell you what the product was. The word "ecosystem" appeared 63 times.</p>
-        <p>I watched <strong>AquaDAO</strong> raise $8 million for "tokenizing water." Not water infrastructure. Not clean water access. Just… the <em>concept</em> of water. Their Discord had 40,000 members debating the water token's lore.</p>
-        <p>So I thought: if the bar is this low, I too deserve a fundraiser. Not for a million. Just a humble, honest <strong style="color:var(--orange)">$40,000</strong> — the price of a Toyota Camry — from 8,000 people <em>anywhere on this planet</em> who found this funny enough to donate $5.</p>
-        <p>Ladies and gentlemen, crypto Twitter, and whoever clicked this link by accident — <strong>I present $ZEROTH.</strong> Layer -1. One below Layer 0. We are not solving a problem. We are creating one.</p>
-      </div>
     </div>
-  </div>
-</div>
 
-<!-- PROGRESS -->
-<div class="bg-white">
-  <div class="section" style="max-width:680px;">
-    <div style="text-align:center;margin-bottom:32px;">
-      <div class="section-eyebrow">📊 Funding Status</div>
-      <div class="section-title">The <span style="color:var(--orange)">$40K</span> Mission</div>
-      <div class="section-sub" style="margin:0 auto;">Humble. Transparent. Completely underfunded. Fully live.</div>
-    </div>
-    <div class="progress-card">
-      <div style="text-align:center;margin-bottom:8px;">
-        <span class="live-status loading" id="live-status-badge">⏳ FETCHING LIVE DATA...</span>
-      </div>
-      <div class="raise-big" id="live-total">$0.00</div>
-      <div class="raise-sub">raised across ETH · BTC · SOL · BNB — updated every 5 minutes</div>
-      <div class="progress-bar-wrap">
-        <div class="progress-bar-fill" id="progress-fill"></div>
-      </div>
-      <div class="progress-labels">
-        <span id="progress-left-label">🔄 Loading live balances...</span>
-        <span>Goal: $40,000</span>
-      </div>
-
-      <!-- Per-chain breakdown -->
-      <div class="breakdown-row" id="breakdown-row" style="display:none;">
-        <div class="bp"><span class="bp-dot" style="background:#627eea;"></span> ETH: <strong id="bp-eth">$0.00</strong></div>
-        <div class="bp"><span class="bp-dot" style="background:#f7931a;"></span> BTC: <strong id="bp-btc">$0.00</strong></div>
-        <div class="bp"><span class="bp-dot" style="background:#9945ff;"></span> SOL: <strong id="bp-sol">$0.00</strong></div>
-        <div class="bp"><span class="bp-dot" style="background:#f3ba2f;"></span> BNB: <strong id="bp-bnb">$0.00</strong></div>
-      </div>
-
-      <div class="math-trio" style="margin-top:24px;">
-        <div class="math-card"><div class="math-icon">🙋</div><div class="math-num" id="believers-count">—</div><div class="math-label">Believers So Far</div></div>
-        <div class="math-card"><div class="math-icon">☕</div><div class="math-num">$5</div><div class="math-label">Less Than a Latte</div></div>
-        <div class="math-card"><div class="math-icon">🫠</div><div class="math-num">0</div><div class="math-label">Products Shipped</div></div>
-      </div>
-      <div class="refresh-time" id="refresh-time" style="text-align:center;"></div>
-
-      <!-- Share row -->
-      <div class="share-row">
-        <a class="share-btn share-x" id="share-x-btn" href="#" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.163 519.284ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.828Z" fill="white"/></svg>
-          Share on X
-        </a>
-        <button class="share-btn share-copy" onclick="copyPageLink(this)">🔗 Copy Link</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- TOKENOMICS -->
-<div class="bg-cool" id="tokenomics">
-  <div class="section">
-    <div class="section-eyebrow">🍕 Tokenomics</div>
-    <div class="section-title">Where Your <span style="color:var(--orange)">$5</span> Actually Goes</div>
-    <div class="section-sub">Maximum transparency. Every dollar accounted for. Mostly food.</div>
-    <div class="toko-grid">
-      <div class="toko-card">
-        <div class="toko-icon" style="background:#fef3e2;">🍕</div>
-        <div><div class="toko-name">Founder Sustenance Fund</div><div class="toko-real">Food delivery apps at midnight. Whatever's open at 2am in whichever timezone the founder is currently pretending to be productive in.</div></div>
-        <div class="toko-pct">22%</div><div class="toko-amt">$8,800</div>
-      </div>
-      <div class="toko-card">
-        <div class="toko-icon" style="background:#f0fdf4;">⚡</div>
-        <div><div class="toko-name">Infrastructure & Operations</div><div class="toko-real">Electricity bill, Wi-Fi, one Notion Pro, ChatGPT Plus (used entirely for the whitepaper)</div></div>
-        <div class="toko-pct">18%</div><div class="toko-amt">$7,200</div>
-      </div>
-      <div class="toko-card">
-        <div class="toko-icon" style="background:#eff6ff;">📣</div>
-        <div><div class="toko-name">Marketing & Community Growth</div><div class="toko-real">Boosting tweets that say "LFG 🚀". Targeting crypto accounts with 0 followers and 3 posts.</div></div>
-        <div class="toko-pct">15%</div><div class="toko-amt">$6,000</div>
-      </div>
-      <div class="toko-card">
-        <div class="toko-icon" style="background:#fdf4ff;">💧</div>
-        <div><div class="toko-name">Liquidity Provision</div><div class="toko-real">Added to the pool. Removed from the pool. 72 hours. This is what "DeFi" means.</div></div>
-        <div class="toko-pct">15%</div><div class="toko-amt">$6,000</div>
-      </div>
-      <div class="toko-card">
-        <div class="toko-icon" style="background:#fefce8;">🎓</div>
-        <div><div class="toko-name">Research & Development</div><div class="toko-real">One Udemy course on Solidity ($12.99). The remaining $3,987 is "miscellaneous R&D expenses."</div></div>
-        <div class="toko-pct">10%</div><div class="toko-amt">$4,000</div>
-      </div>
-      <div class="toko-card">
-        <div class="toko-icon" style="background:#fff1f2;">🧑‍⚖️</div>
-        <div><div class="toko-name">Legal & Compliance</div><div class="toko-real">Reading a Terms & Conditions document for the first time in my life. May need therapy after.</div></div>
-        <div class="toko-pct">8%</div><div class="toko-amt">$3,200</div>
-      </div>
-      <div class="toko-card">
-        <div class="toko-icon" style="background:#f0fdf4;">🏖️</div>
-        <div><div class="toko-name">Team Offsite & Culture Budget</div><div class="toko-real">It's just me. The offsite is my couch. This budget is for snacks and a good blanket.</div></div>
-        <div class="toko-pct">7%</div><div class="toko-amt">$2,800</div>
-      </div>
-      <div class="toko-card">
-        <div class="toko-icon" style="background:#f8faff;">🌫️</div>
-        <div><div class="toko-name">Ecosystem Reserve Fund</div><div class="toko-real">Nobody knows what this is. Every project has one. We have one too. It's on page 67 of the whitepaper.</div></div>
-        <div class="toko-pct">5%</div><div class="toko-amt">$2,000</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- TECH ANALYSIS -->
-<div class="bg-warm" id="analysis">
-  <div class="section">
-    <div class="section-eyebrow">📉 Technical Analysis</div>
-    <div class="section-title">The Charts <span style="color:var(--orange)">Don't Lie</span></div>
-    <div class="section-sub">Advanced Fibonacci, Elliott Wave theory, and one gut feeling after the morning coffee. All pointing in one direction: sure, why not.</div>
-    <div class="ta-layout">
-      <!-- Full-width chart -->
-      <div class="price-chart">
-        <div class="price-chart-title">📊 $ZEROTH / USDT — Simulated Price Action (30 Days)</div>
-        <div class="chart-area">
-          <svg class="chart-svg" viewBox="0 0 600 150" preserveAspectRatio="none">
-            <defs>
-              <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#f97316" stop-opacity="0.25"/>
-                <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
-              </linearGradient>
-            </defs>
-            <line x1="0" y1="130" x2="600" y2="130" stroke="#e5e7eb" stroke-width="1"/>
-            <line x1="0" y1="100" x2="600" y2="100" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4,4"/>
-            <line x1="0" y1="70" x2="600" y2="70" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4,4"/>
-            <line x1="0" y1="40" x2="600" y2="40" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4,4"/>
-            <path d="M0,128 L55,126 L115,12 L170,8 L210,22 L260,58 L300,92 L340,114 L380,118 L430,122 L480,126 L600,128" fill="url(#cg)"/>
-            <path d="M0,128 L55,126 L115,12 L170,8 L210,22 L260,58 L300,92 L340,114 L380,118 L430,122 L480,126 L600,128" fill="none" stroke="#f97316" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="115" cy="12" r="5" fill="#22c55e"/>
-            <text x="115" y="6" fill="#22c55e" font-size="9" text-anchor="middle" font-family="JetBrains Mono, monospace">🚀 +47000%</text>
-            <circle cx="300" cy="92" r="4" fill="#f59e0b"/>
-            <text x="300" y="86" fill="#f59e0b" font-size="8" text-anchor="middle" font-family="JetBrains Mono, monospace">📉 dump</text>
-            <circle cx="480" cy="126" r="4" fill="#ef4444"/>
-            <text x="480" y="120" fill="#ef4444" font-size="9" text-anchor="middle">💀</text>
-          </svg>
-        </div>
-        <div class="chart-days"><span>Day 1</span><span>Day 7</span><span>Day 14</span><span>Day 21</span><span>Day 30</span></div>
-        <div class="chart-events">
-          <div class="ce-card"><div class="ce-emoji">🚀</div><div class="ce-day">DAY 1</div><div class="ce-txt">+47,000% — Account with 12 followers called it a "hidden gem"</div></div>
-          <div class="ce-card"><div class="ce-emoji">📊</div><div class="ce-day">DAY 3</div><div class="ce-txt">Influencer posts chart with 9 arrows. Nobody understands it. +200%.</div></div>
-          <div class="ce-card"><div class="ce-emoji">🐳</div><div class="ce-day">DAY 7</div><div class="ce-txt">Whale dumps. Community: "healthy correction." It is not healthy.</div></div>
-          <div class="ce-card"><div class="ce-emoji">🔐</div><div class="ce-day">DAY 14</div><div class="ce-txt">Dev wallet moves. "Routine maintenance." It is not routine.</div></div>
-          <div class="ce-card"><div class="ce-emoji">🫥</div><div class="ce-day">DAY 30</div><div class="ce-txt">Returns to $0.001. Whitepaper quietly updated. Q4 2027 added.</div></div>
-        </div>
-      </div>
-
-      <div class="ta-card">
-        <div class="ta-card-head"><span class="ta-icon">🔬</span><span class="ta-card-title">Key Indicators</span></div>
-        <div class="ta-row"><span class="ta-key">RSI (14)</span><span class="ta-val v-red">Oversold Since Birth</span></div>
-        <div class="ta-row"><span class="ta-key">MACD Signal</span><span class="ta-val v-orange">Confused</span></div>
-        <div class="ta-row"><span class="ta-key">Bollinger Bands</span><span class="ta-val v-red">Both Bands Are One Line</span></div>
-        <div class="ta-row"><span class="ta-key">200-Day MA</span><span class="ta-val v-orange">Doesn't Exist Yet</span></div>
-        <div class="ta-row"><span class="ta-key">Volume (24h)</span><span class="ta-val v-orange" id="live-volume">Loading...</span></div>
-        <div class="ta-row"><span class="ta-key">Market Cap</span><span class="ta-val v-red">Theoretical</span></div>
-      </div>
-
-      <div class="ta-card">
-        <div class="ta-card-head"><span class="ta-icon">🎯</span><span class="ta-card-title">Support & Resistance</span></div>
-        <div class="ta-row"><span class="ta-key">Support Level 1</span><span class="ta-val v-orange">Hope</span></div>
-        <div class="ta-row"><span class="ta-key">Support Level 2</span><span class="ta-val v-red">Delusion</span></div>
-        <div class="ta-row"><span class="ta-key">Resistance Level 1</span><span class="ta-val v-red">Reality</span></div>
-        <div class="ta-row"><span class="ta-key">Key Fibonacci</span><span class="ta-val v-purple">0.000 (The Void)</span></div>
-        <div class="ta-row"><span class="ta-key">Bull Case Target</span><span class="ta-val v-green">$1 (if Elon tweets)</span></div>
-        <div class="ta-row"><span class="ta-key">Bear Case Target</span><span class="ta-val v-red">$0.000 (Confirmed)</span></div>
-      </div>
-
-      <div class="ta-card">
-        <div class="ta-card-head"><span class="ta-icon">🔗</span><span class="ta-card-title">On-Chain Metrics</span></div>
-        <div class="ta-row"><span class="ta-key">Unique Holders</span><span class="ta-val v-orange">47 (Same Person)</span></div>
-        <div class="ta-row"><span class="ta-key">Smart Money</span><span class="ta-val v-red">Already Left</span></div>
-        <div class="ta-row"><span class="ta-key">Token Velocity</span><span class="ta-val v-orange">Stationary</span></div>
-        <div class="ta-row"><span class="ta-key">Whale Concentration</span><span class="ta-val v-red">100% (It's Me)</span></div>
-        <div class="ta-row"><span class="ta-key">Burn Mechanism</span><span class="ta-val v-orange">Burning the Roadmap</span></div>
-        <div class="ta-row"><span class="ta-key">Staking APY</span><span class="ta-val v-green">∞% (Unverified)</span></div>
-      </div>
-
-      <div class="ta-card">
-        <div class="ta-card-head"><span class="ta-icon">🌡️</span><span class="ta-card-title">Sentiment Analysis</span></div>
-        <div class="ta-row"><span class="ta-key">Crypto Twitter</span><span class="ta-val v-green">Unaware = Bullish</span></div>
-        <div class="ta-row"><span class="ta-key">Discord Vibe</span><span class="ta-val v-orange">3 Members. Very Active.</span></div>
-        <div class="ta-row"><span class="ta-key">Reddit Sentiment</span><span class="ta-val v-orange">"What is this?"</span></div>
-        <div class="ta-row"><span class="ta-key">Fear & Greed Index</span><span class="ta-val v-red">Personal Fear: High</span></div>
-        <div class="ta-row"><span class="ta-key">Founder Confidence</span><span class="ta-val v-green">Irrational. Bullish.</span></div>
-        <div class="ta-row"><span class="ta-key">Search Trends</span><span class="ta-val v-orange">"Is zeroth a scam?" 📈</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ROADMAP -->
-<div class="bg-white">
-  <div class="section">
-    <div class="section-eyebrow">🗺️ Roadmap</div>
-    <div class="section-title">The <span style="color:var(--orange)">Master Plan</span></div>
-    <div class="section-sub">Ambitious. Detailed. Subject to change based on mood, weather, and GTA Online server availability.</div>
-    <div class="roadmap-grid">
-      <div class="rm-card"><div class="rm-emoji">🚀</div><div class="rm-quarter">Q2 2026 — NOW</div><div class="rm-title">The Raise</div><div class="rm-desc">Raise $40,000. Post celebration tweet. Change bio to "Founder @ZerothProtocol." Begin wearing hoodies exclusively. Call myself a "builder."</div></div>
-      <div class="rm-card"><div class="rm-emoji">🤫</div><div class="rm-quarter">Q3 2026</div><div class="rm-title">Building in Silence</div><div class="rm-desc">Actively playing GTA. Tweet "big things cooking 🔥" at 1am every two weeks. Whitepaper gets a new font. Team photo updated (same photo, better filter).</div></div>
-      <div class="rm-card"><div class="rm-emoji">💻</div><div class="rm-quarter">Q4 2026</div><div class="rm-title">Testnet Launch</div><div class="rm-desc">Testnet crashes in 4 minutes. Community: "battle-tested." We call it "successful stress test phase." Roadmap pushed to Q1 2027.</div></div>
-      <div class="rm-card"><div class="rm-emoji">📉</div><div class="rm-quarter">Q1 2027</div><div class="rm-title">Market Conditions</div><div class="rm-desc">Blame market conditions for everything. Post "bear market survival guide." Price: $0.00004. "We're accumulating, anon." Vibes: immaculate.</div></div>
-      <div class="rm-card"><div class="rm-emoji">👀</div><div class="rm-quarter">Q2 2027</div><div class="rm-title">V2 Announcement</div><div class="rm-desc">"V2 changes everything." Attach Figma mockup — a rectangle with "$ZEROTH V2" in bold. Community: "LFG!!!" 🚀🚀🚀</div></div>
-      <div class="rm-card"><div class="rm-emoji">🌫️</div><div class="rm-quarter">Q4 2027</div><div class="rm-title">V2 Status Update</div><div class="rm-desc">V2 is not coming. "Pivoting to the core primitive." Nobody asks what the core primitive is. This is intentional.</div></div>
-      <div class="rm-card"><div class="rm-emoji">🤖</div><div class="rm-quarter">2028</div><div class="rm-title">The AI Pivot</div><div class="rm-desc">Announce $ZEROTH AI. Add "AI" to website. Raise another $40,000. Full circle. The ecosystem is now complete. We have built nothing, twice.</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- TEAM -->
-<div class="bg-cool" id="team">
-  <div class="section">
-    <div class="section-eyebrow">👥 The Team</div>
-    <div class="section-title">World-Class <span style="color:var(--orange)">Talent</span></div>
-    <div class="section-sub">You won't find these credentials on LinkedIn. Primarily because they are not on LinkedIn.</div>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-av">👨‍💻</div>
-        <div class="team-name">Anon (It's Me)</div>
-        <div class="team-role">CEO · CFO · CTO · CMO · Intern · Janitor</div>
-        <div class="team-bio">Visionary. Tweeted about crypto 43 times. Once explained blockchain to a family member at a wedding dinner. It did not go well. "Serial entrepreneur" — this is the first company. The series is one entry long.</div>
-        <div class="team-tag">📍 Online. Always. Send Help.</div>
-      </div>
-      <div class="team-card">
-        <div class="team-av">📡</div>
-        <div class="team-name">CryptoUncle</div>
-        <div class="team-role">Lead Strategic Advisor</div>
-        <div class="team-bio">Runs a Telegram channel with 200 members. Posts charts at 3am in some timezone with zero context. Unknown location. Unknown age. Possibly raccoons in a trenchcoat. The raccoons are also advisors.</div>
-        <div class="team-tag">📍 Telegram, Permanently</div>
-      </div>
-      <div class="team-card">
-        <div class="team-av">🧑‍🎓</div>
-        <div class="team-name">The Cousin</div>
-        <div class="team-role">Risk Management Advisor</div>
-        <div class="team-bio">Bought ETH at $4,800 in November 2021. Sold at $900 in June 2022. We call this "invaluable market cycle experience." He is our most credentialed team member.</div>
-        <div class="team-tag">💸 Recovered. Mostly.</div>
-      </div>
-      <div class="team-card">
-        <div class="team-av">🌫️</div>
-        <div class="team-name">[REDACTED]</div>
-        <div class="team-role">Chief Technology Officer</div>
-        <div class="team-bio">Photo slightly blurry. LinkedIn has 3 connections, all family. Claims to have "shipped at scale." Scale unconfirmed. Located somewhere with good Wi-Fi and bad lighting.</div>
-        <div class="team-tag">🔒 NDA Signed (By Us)</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- RISK -->
-<div class="bg-warm">
-  <div class="section">
-    <div class="section-eyebrow">⚠️ Risk Disclosure</div>
-    <div class="section-title">Risks You Should <span style="color:var(--orange)">Probably Know</span></div>
-    <div class="section-sub">We are legally required to disclose these. Or maybe not. We didn't read the legal requirements either.</div>
-    <div class="risk-table-wrap">
-      <table class="risk-table">
-        <thead><tr><th>Risk Factor</th><th>Severity</th><th>Mitigation Strategy</th></tr></thead>
-        <tbody>
-          <tr><td>💸 Total loss of your $5</td><td><span class="risk-badge rb-high">HIGH</span></td><td>Think of it as a lottery ticket, but the lottery is vibe-based and nobody wins.</td></tr>
-          <tr><td>🍕 Founder uses funds for food delivery</td><td><span class="risk-badge rb-extreme">EXTREME</span></td><td>Honestly? Yes. This is literally in the tokenomics. 22% of your $5 is a midnight snack. We told you upfront.</td></tr>
-          <tr><td>🐦 Getting ratio'd on CT for defending $ZEROTH</td><td><span class="risk-badge rb-high">HIGH</span></td><td>Do not defend this publicly. Just accept it quietly and move on with dignity.</td></tr>
-          <tr><td>👨‍👩‍👧 Telling friends and family about it</td><td><span class="risk-badge rb-extreme">EXTREME</span></td><td>They will not understand. Some relationships may not survive. This is the cost of being early.</td></tr>
-          <tr><td>🗺️ Roadmap not being delivered</td><td><span class="risk-badge rb-certain">CERTAIN</span></td><td>See roadmap. Q4 2027 section specifically. It's written into the product.</td></tr>
-          <tr><td>📉 Price goes to zero</td><td><span class="risk-badge rb-medium">MEDIUM</span></td><td>Already priced in. The token IS zero. We call this "undervalued by the market."</td></tr>
-          <tr><td>😤 Competitor launches "$LESSTHANZERO"</td><td><span class="risk-badge rb-medium">MEDIUM</span></td><td>We call ourselves the OG and launch $ZEROTH2 within 48 hours.</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-<!-- DONATE -->
-<div class="donate-bg" id="donate">
-  <div class="donate-float df-1">₿</div>
-  <div class="donate-float df-2">Ξ</div>
-  <div class="donate-float df-3">◎</div>
-  <div class="donate-inner">
-    <div class="donate-headline">Send Your <span class="ya">$5.</span><br>Change Nothing.</div>
-    <div class="donate-sub">You've spent more on Starbucks drinks that weren't right. At least this brings you joy.<br>BTC, ETH, BNB, and SOL accepted. We are chain-agnostic. We are also product-agnostic.</div>
-
-    <div class="wallet-tabs">
-      <button class="tab-btn active" onclick="showTab('eth',this)">
-        <svg width="14" height="14" viewBox="0 0 256 417" style="vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><polygon fill="currentColor" points="127.9611,0 125.1661,9.5 125.1661,285.168 127.9611,287.958 255.9231,212.32"/><polygon fill="currentColor" opacity=".6" points="127.962,0 0,212.32 127.962,287.958 127.962,154.158"/><polygon fill="currentColor" opacity=".8" points="127.9611,312.1866 126.3861,314.1066 126.3861,412.3056 127.9611,416.9066 255.9991,236.5866"/><polygon fill="currentColor" opacity=".6" points="127.962,416.9052 127.962,312.1852 0,236.5852"/></svg>ETH
-      </button>
-      <button class="tab-btn" onclick="showTab('bnb',this)">
-        <svg width="14" height="14" viewBox="0 0 2496 2496" style="vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M764.48 1247.9L1248 764.45l483.76 483.75 281.3-281.3L1248 202l-765.1 765.1 281.58 280.8zM202 1248l281.3 281.3L764.6 1248l-281.3-281.3L202 1248zm562.48 0.1l483.52 483.52 483.76-483.76 281.46 281.16-.16.16L1248 2294 483.1 1529.1l-.4-.4 281.78-280.6zM1731.4 1248l281.3 281.3 281.3-281.3-281.3-281.3L1731.4 1248z"/><path fill="currentColor" d="M1431.78 1248.08h.08l-183.86-183.86-135.78 135.74-.04.04-15.6 15.6-32.32 32.48 183.74 183.74 183.78-183.74z"/></svg>BNB
-      </button>
-      <button class="tab-btn" onclick="showTab('btc',this)">
-        <svg width="14" height="14" viewBox="0 0 4091.27 4091.73" style="vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M2947.77 1754.38c40.72-272.26-166.56-418.61-450-516.24l91.95-368.8-224.5-55.94-89.51 359.09c-59.02-14.72-119.63-28.59-179.87-42.34l90.16-361.46-224.36-55.94-92 368.68c-48.84-11.12-96.81-22.11-143.35-33.69l.26-1.16-309.59-77.31-59.72 239.78s166.56 38.18 163.05 40.53c90.91 22.69 107.35 82.87 104.62 130.57l-104.74 420.15c6.26 1.59 14.38 3.89 23.34 7.49-7.49-1.86-15.46-3.89-23.73-5.87l-146.81 588.57c-11.11 27.62-39.31 69.07-102.87 53.33 2.25 3.26-163.17-40.72-163.17-40.72l-111.46 256.98 292.15 72.83c54.35 13.6 107.61 27.89 160.06 41.3l-92.9 373.03 224.24 55.94 92-369.07c61.26 16.63 120.71 31.97 178.91 46.43l-91.69 367.33 224.51 55.94 92.89-372.33c382.82 72.45 670.67 43.24 791.83-303.02 97.63-278.78-4.86-439.58-206.26-544.44 146.69-33.83 257.18-130.31 286.64-329.23zm-512.93 719.26c-69.38 278.78-538.76 128.08-690.94 90.29l123.28-494.2c152.17 37.99 640.17 113.17 567.66 403.91zm69.43-723.3c-63.29 253.58-453.96 124.75-580.69 93.16l111.77-448.21c126.73 31.59 534.85 90.55 468.92 355.05z"/></svg>BTC
-      </button>
-      <button class="tab-btn" onclick="showTab('sol',this)">
-        <svg width="14" height="14" viewBox="0 0 397.7 311.7" style="vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M64.6 237.9c2.4-2.4 5.7-3.8 9.2-3.8h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1l62.7-62.7z"/><path fill="currentColor" d="M64.6 3.8C67.1 1.4 70.4 0 73.8 0h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1L64.6 3.8z"/><path fill="currentColor" d="M333.1 120.1c-2.4-2.4-5.7-3.8-9.2-3.8H6.5c-5.8 0-8.7 7-4.6 11.1l62.7 62.7c2.4 2.4 5.7 3.8 9.2 3.8h317.4c5.8 0 8.7-7 4.6-11.1l-62.7-62.7z"/></svg>SOL
+    <!-- Share -->
+    <div class="text-center">
+      <button onclick="shareOnX()" class="bg-black hover:bg-lime-400 hover:text-black border-4 border-lime-400 text-3xl px-16 py-6 rounded-3xl transition-all flex items-center gap-4 mx-auto">
+        <i class="fa-brands fa-x-twitter text-4xl"></i>
+        SHARE THIS MASTERPIECE ON X
       </button>
     </div>
-
-    <div class="wallet-panel active" id="panel-eth">
-      <div class="wallet-box">
-        <div class="qr-frame">
-          <svg width="52" height="52" viewBox="0 0 256 417" xmlns="http://www.w3.org/2000/svg">
-            <polygon fill="#343434" points="127.9611,0 125.1661,9.5 125.1661,285.168 127.9611,287.958 255.9231,212.32"/>
-            <polygon fill="#8C8C8C" points="127.962,0 0,212.32 127.962,287.958 127.962,154.158"/>
-            <polygon fill="#3C3C3B" points="127.9611,312.1866 126.3861,314.1066 126.3861,412.3056 127.9611,416.9066 255.9991,236.5866"/>
-            <polygon fill="#8C8C8C" points="127.962,416.9052 127.962,312.1852 0,236.5852"/>
-            <polygon fill="#141414" points="127.9611,287.9572 255.9211,212.3202 127.9611,154.1572"/>
-            <polygon fill="#393939" points="0,212.3202 127.9611,287.9572 127.9611,154.1572"/>
-          </svg>
-        </div>
-        <div class="wallet-info">
-          <div class="w-chain">Ethereum (ETH)</div>
-          <div class="w-network">ERC-20 compatible · Works for ETH, USDT (ERC-20), USDC on Ethereum</div>
-          <div class="w-addr" id="addr-eth">0x02e82B5095907772EBD09503645d209e281aaD05</div>
-          <button class="copy-btn" onclick="copyWallet('addr-eth',this)">📋 Copy Address</button>
-        </div>
-      </div>
-    </div>
-    <div class="wallet-panel" id="panel-bnb">
-      <div class="wallet-box">
-        <div class="qr-frame">
-          <svg width="52" height="52" viewBox="0 0 2496 2496" xmlns="http://www.w3.org/2000/svg">
-            <rect width="2496" height="2496" rx="832" fill="#F3BA2F"/>
-            <path fill="#fff" d="M764.48 1247.9L1248 764.45l483.76 483.75 281.3-281.3L1248 202l-765.1 765.1 281.58 280.8zM202 1248l281.3 281.3L764.6 1248l-281.3-281.3L202 1248zm562.48 0.1l483.52 483.52 483.76-483.76 281.46 281.16-.16.16L1248 2294 483.1 1529.1l-.4-.4 281.78-280.6zM1731.4 1248l281.3 281.3 281.3-281.3-281.3-281.3L1731.4 1248z"/>
-            <path fill="#fff" d="M1431.78 1248.08h.08l-183.86-183.86-135.78 135.74-.04.04-15.6 15.6-32.32 32.48 183.74 183.74 183.78-183.74z"/>
-          </svg>
-        </div>
-        <div class="wallet-info">
-          <div class="w-chain">BNB Smart Chain</div>
-          <div class="w-network">BEP-20 · Same address format as ETH but different chain · Don't mix them up</div>
-          <div class="w-addr" id="addr-bnb">0x02e82B5095907772EBD09503645d209e281aaD05</div>
-          <button class="copy-btn" onclick="copyWallet('addr-bnb',this)">📋 Copy Address</button>
-        </div>
-      </div>
-    </div>
-    <div class="wallet-panel" id="panel-btc">
-      <div class="wallet-box">
-        <div class="qr-frame">
-          <svg width="52" height="52" viewBox="0 0 4091.27 4091.73" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#F7931A" d="M4030.06 2540.77c-273.24 1096.01-1383.32 1763.02-2479.46 1489.71C474.73 3757.19-192.28 2647.08 80.91 1551.13 354.09 455.02 1464.17-212.01 2560.25 61.27c1096.07 273.2 1763.03 1383.19 1489.81 2479.5z"/>
-            <path fill="#fff" d="M2947.77 1754.38c40.72-272.26-166.56-418.61-450-516.24l91.95-368.8-224.5-55.94-89.51 359.09c-59.02-14.72-119.63-28.59-179.87-42.34l90.16-361.46-224.36-55.94-92 368.68c-48.84-11.12-96.81-22.11-143.35-33.69l.26-1.16-309.59-77.31-59.72 239.78s166.56 38.18 163.05 40.53c90.91 22.69 107.35 82.87 104.62 130.57l-104.74 420.15c6.26 1.59 14.38 3.89 23.34 7.49-7.49-1.86-15.46-3.89-23.73-5.87l-146.81 588.57c-11.11 27.62-39.31 69.07-102.87 53.33 2.25 3.26-163.17-40.72-163.17-40.72l-111.46 256.98 292.15 72.83c54.35 13.6 107.61 27.89 160.06 41.3l-92.9 373.03 224.24 55.94 92-369.07c61.26 16.63 120.71 31.97 178.91 46.43l-91.69 367.33 224.51 55.94 92.89-372.33c382.82 72.45 670.67 43.24 791.83-303.02 97.63-278.78-4.86-439.58-206.26-544.44 146.69-33.83 257.18-130.31 286.64-329.23zm-512.93 719.26c-69.38 278.78-538.76 128.08-690.94 90.29l123.28-494.2c152.17 37.99 640.17 113.17 567.66 403.91zm69.43-723.3c-63.29 253.58-453.96 124.75-580.69 93.16l111.77-448.21c126.73 31.59 534.85 90.55 468.92 355.05z"/>
-          </svg>
-        </div>
-        <div class="wallet-info">
-          <div class="w-chain">Bitcoin (BTC)</div>
-          <div class="w-network">Native SegWit bech32 · Only send BTC here · Other assets will be lost forever (it says so in the app)</div>
-          <div class="w-addr" id="addr-btc">bc1qk3uqm3kraksn42hx7fuhmrch0nhecwenjhgwja</div>
-          <button class="copy-btn" onclick="copyWallet('addr-btc',this)">📋 Copy Address</button>
-        </div>
-      </div>
-    </div>
-    <div class="wallet-panel" id="panel-sol">
-      <div class="wallet-box">
-        <div class="qr-frame">
-          <svg width="52" height="52" viewBox="0 0 397.7 311.7" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="solQrGrad1" x1="360.879" y1="351.455" x2="141.213" y2="-69.294" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#9945ff"/>
-                <stop offset=".91" stop-color="#14f195"/>
-              </linearGradient>
-            </defs>
-            <path fill="url(#solQrGrad1)" d="M64.6 237.9c2.4-2.4 5.7-3.8 9.2-3.8h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1l62.7-62.7z"/>
-            <path fill="url(#solQrGrad1)" d="M64.6 3.8C67.1 1.4 70.4 0 73.8 0h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1L64.6 3.8z"/>
-            <path fill="url(#solQrGrad1)" d="M333.1 120.1c-2.4-2.4-5.7-3.8-9.2-3.8H6.5c-5.8 0-8.7 7-4.6 11.1l62.7 62.7c2.4 2.4 5.7 3.8 9.2 3.8h317.4c5.8 0 8.7-7 4.6-11.1l-62.7-62.7z"/>
-          </svg>
-        </div>
-        <div class="wallet-info">
-          <div class="w-chain">Solana (SOL)</div>
-          <div class="w-network">No memo required · SPL tokens also accepted · Just vibes required</div>
-          <div class="w-addr" id="addr-sol">DfJpmHs9gRyJALsJBAh5xYkTBgaZJMVV8dTRR5aLfF9E</div>
-          <button class="copy-btn" onclick="copyWallet('addr-sol',this)">📋 Copy Address</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="disclaimer">
-      <strong>⚠ DISCLAIMER:</strong> $ZEROTH is a satirical fundraiser for entertainment purposes. This is not financial advice. Do not send money you cannot afford to lose to someone on the internet who openly admits they have no product. By donating, you confirm you read this page, found it funny, and voluntarily gave $5 to a stranger's electricity bill. <strong>This is not a scam — it's just nothing.</strong> Which, in the current market, makes it one of the more honest projects in existence.
-    </div>
   </div>
-</div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">$ZEROTH</div>
-  <div class="footer-tagline">Layer -1 · One Below Layer 0</div>
-  <div>Built on nothing · Secured by vibes · Audited by feelings</div>
-  <div class="footer-note">© 2026 Zeroth Protocol. No intellectual property was harmed — because there is no intellectual property.</div>
-</footer>
+  <script>
+    // === REPLACE THESE WITH YOUR REAL KEYS ===
+    const ETHERSCAN_API_KEY = "XYAPTMF2TVNKG5GEYH8GDG91IUXRCK57Z7";
+    const HELIUS_API_KEY = "322e7bab-c3f4-408c-a0fc-517d9117f496";
 
-<script>
-// ─── CONFIG ────────────────────────────────────────────────────────────────────
-const ETH_ADDR = '0x02e82B5095907772EBD09503645d209e281aaD05';
-const BTC_ADDR = 'bc1qk3uqm3kraksn42hx7fuhmrch0nhecwenjhgwja';
-const SOL_ADDR = 'DfJpmHs9gRyJALsJBAh5xYkTBgaZJMVV8dTRR5aLfF9E';
-const ETHERSCAN_KEY = 'XYAPTMF2TVNKG5GEYH8GDG91IUXRCK57Z7';
-const HELIUS_KEY    = '322e7bab-c3f4-408c-a0fc-517d9117f496';
-const GOAL          = 40000;
-const REFRESH_MS    = 5 * 60 * 1000; // 5 minutes
+    const wallets = {
+      eth: "0x02e82B5095907772EBD09503645d209e281aaD05",
+      btc: "bc1qk3uqm3kraksn42hx7fuhmrch0nhecwenjhgwja",
+      sol: "DfJpmHs9gRyJALsJBAh5xYkTBgaZJMVV8dTRR5aLfF9E"
+    };
 
-// ─── FETCH BALANCES ────────────────────────────────────────────────────────────
-async function fetchPrices() {
-  const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin&vs_currencies=usd');
-  const d = await res.json();
-  return {
-    btc: d.bitcoin?.usd || 0,
-    eth: d.ethereum?.usd || 0,
-    sol: d.solana?.usd || 0,
-    bnb: d.binancecoin?.usd || 0
-  };
-}
+    let totalUSD = 0;
 
-async function fetchEthBalance() {
-  try {
-    const res = await fetch(`https://api.etherscan.io/api?module=account&action=balance&address=${ETH_ADDR}&tag=latest&apikey=${ETHERSCAN_KEY}`);
-    const d = await res.json();
-    return d.status === '1' ? parseFloat(d.result) / 1e18 : 0;
-  } catch { return 0; }
-}
+    async function fetchBalances() {
+      totalUSD = 0;
+      const now = new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+      document.getElementById("last-updated").textContent = `Last updated: ${now}`;
 
-async function fetchBnbBalance() {
-  try {
-    const res = await fetch(`https://api.bscscan.com/api?module=account&action=balance&address=${ETH_ADDR}&tag=latest`);
-    const d = await res.json();
-    return d.status === '1' ? parseFloat(d.result) / 1e18 : 0;
-  } catch { return 0; }
-}
+      // ETH via Etherscan
+      try {
+        const res = await fetch(`https://api.etherscan.io/api?module=account&action=balance&address=${wallets.eth}&tag=latest&apikey=${ETHERSCAN_API_KEY}`);
+        const data = await res.json();
+        if (data.status === "1") {
+          const balance = parseFloat(data.result) / 1e18;
+          totalUSD += balance * 2420;   // current approx ETH price
+        }
+      } catch(e) { console.log("ETH error", e); }
 
-async function fetchBtcBalance() {
-  try {
-    const res = await fetch(`https://api.blockcypher.com/v1/btc/main/addrs/${BTC_ADDR}/balance`);
-    const d = await res.json();
-    return (d.balance || 0) / 1e8;
-  } catch { return 0; }
-}
+      // SOL via Helius
+      try {
+        const res = await fetch(`https://mainnet.helius-rpc.com/?api-key=${HELIUS_API_KEY}`, {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({
+            jsonrpc: "2.0", id: "1", method: "getBalance", params: [wallets.sol]
+          })
+        });
+        const data = await res.json();
+        if (data.result) {
+          const balance = data.result.value / 1e9;
+          totalUSD += balance * 89;     // current approx SOL price
+        }
+      } catch(e) { console.log("SOL error", e); }
 
-async function fetchSolBalance() {
-  try {
-    const res = await fetch(`https://mainnet.helius-rpc.com/?api-key=${HELIUS_KEY}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'getBalance', params: [SOL_ADDR] })
-    });
-    const d = await res.json();
-    return (d.result?.value || 0) / 1e9;
-  } catch { return 0; }
-}
+      // BTC public
+      try {
+        const res = await fetch(`https://blockchain.info/balance?active=${wallets.btc}`);
+        const data = await res.json();
+        const balance = data[wallets.btc].final_balance / 100000000;
+        totalUSD += balance * 77200;   // current approx BTC price
+      } catch(e) { console.log("BTC error", e); }
 
-// ─── UPDATE UI ─────────────────────────────────────────────────────────────────
-function fmt(n) {
-  if (n >= 1000) return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  return '$' + n.toFixed(2);
-}
+      // Update UI
+      const formatted = totalUSD.toFixed(2);
+      document.getElementById("raised").textContent = `$${formatted}`;
+      document.getElementById("raised-big").textContent = `$${formatted}`;
+      
+      const percent = Math.min((totalUSD / 40000) * 100, 100);
+      document.getElementById("progress").style.width = `${percent}%`;
+      
+      const believers = Math.floor(totalUSD / 5);
+      document.getElementById("believers").textContent = `${believers} believers`;
+    }
 
-function updateUI(totals, prices) {
-  const ethUsd = totals.eth * prices.eth;
-  const btcUsd = totals.btc * prices.btc;
-  const solUsd = totals.sol * prices.sol;
-  const bnbUsd = totals.bnb * prices.bnb;
-  const total  = ethUsd + btcUsd + solUsd + bnbUsd;
-  const pct    = Math.min((total / GOAL) * 100, 100);
-  const believers = Math.round(total / 5);
+    function copyAddress(addr) {
+      navigator.clipboard.writeText(addr).then(() => {
+        alert("✅ Address copied! Send $5 and watch the counter go up live.");
+      });
+    }
 
-  // Big number
-  document.getElementById('live-total').textContent = fmt(total);
+    function shareOnX() {
+      const text = encodeURIComponent("Just sent $5 to $ZEROTH — Layer -1. Real balances updating live. Most honest project in crypto. 0 products, ∞ vibes → https://zerothlayer-1.netlify.app/ @The869Guy");
+      window.open(`https://x.com/intent/tweet?text=${text}`, '_blank');
+    }
 
-  // Progress bar
-  document.getElementById('progress-fill').style.width = Math.max(pct, total > 0 ? 0.5 : 0) + '%';
+    // Start fetching
+    setInterval(fetchBalances, 15000);
+    fetchBalances();
 
-  // Labels
-  document.getElementById('progress-left-label').textContent =
-    total > 0 ? `🟢 ${fmt(total)} raised (${pct.toFixed(4)}% funded)` : '🫙 $0.00 raised — be the first believer';
-
-  // Breakdown pills
-  document.getElementById('bp-eth').textContent = fmt(ethUsd);
-  document.getElementById('bp-btc').textContent = fmt(btcUsd);
-  document.getElementById('bp-sol').textContent = fmt(solUsd);
-  document.getElementById('bp-bnb').textContent = fmt(bnbUsd);
-  document.getElementById('breakdown-row').style.display = 'flex';
-
-  // Believers
-  document.getElementById('believers-count').textContent = believers > 0 ? believers.toLocaleString() : '0';
-
-  // Live volume in tech analysis
-  document.getElementById('live-volume').textContent = fmt(total) + ' (Onchain)';
-
-  // Ticker
-  const tickerAmt = total > 0 ? fmt(total) + ' RAISED' : '$0.00 (BE FIRST)';
-  document.getElementById('ticker-raised').textContent   = tickerAmt;
-  document.getElementById('ticker-raised-2').textContent = tickerAmt;
-
-  // Status badge
-  const badge = document.getElementById('live-status-badge');
-  badge.textContent = total > 0 ? '🟢 LIVE — ONCHAIN VERIFIED' : '🟢 LIVE — AWAITING FIRST BELIEVER';
-  badge.className = 'live-status';
-
-  // Refresh time
-  const now = new Date();
-  document.getElementById('refresh-time').textContent =
-    `Last updated: ${now.toLocaleTimeString()} · Auto-refreshes every 5 min`;
-
-  // X share link
-  const shareText = total > 0
-    ? `$ZEROTH has raised ${fmt(total)} with literally no product.\n\nIt might be the most honest crypto project ever. I gave them $5.\n\nLayer -1 🚫 One below Layer 0\n`
-    : `There's a crypto project called $ZEROTH with no product, no team, no roadmap, and no token.\n\nI found it hilarious. You might too.\n\nLayer -1 🚫 One below Layer 0\n`;
-  const shareUrl = encodeURIComponent(window.location.href);
-  document.getElementById('share-x-btn').href =
-    `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${shareUrl}`;
-}
-
-function setError() {
-  const badge = document.getElementById('live-status-badge');
-  badge.textContent = '⚠️ API RATE LIMITED — RETRYING...';
-  badge.className = 'live-status error';
-  document.getElementById('progress-left-label').textContent = '⏳ Fetching from blockchain...';
-}
-
-// ─── MAIN REFRESH LOOP ─────────────────────────────────────────────────────────
-async function refreshBalances() {
-  try {
-    const [prices, ethBal, btcBal, solBal, bnbBal] = await Promise.all([
-      fetchPrices(),
-      fetchEthBalance(),
-      fetchBtcBalance(),
-      fetchSolBalance(),
-      fetchBnbBalance()
-    ]);
-    updateUI({ eth: ethBal, btc: btcBal, sol: solBal, bnb: bnbBal }, prices);
-  } catch (e) {
-    setError();
-    console.error('Balance fetch failed:', e);
-  }
-}
-
-// Initial load + periodic refresh
-refreshBalances();
-setInterval(refreshBalances, REFRESH_MS);
-
-// ─── WALLET TABS ───────────────────────────────────────────────────────────────
-function showTab(chain, btn) {
-  document.querySelectorAll('.wallet-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('panel-' + chain).classList.add('active');
-  btn.classList.add('active');
-}
-
-// ─── COPY WALLET ───────────────────────────────────────────────────────────────
-function copyWallet(id, btn) {
-  const addr = document.getElementById(id).textContent.trim();
-  const doCopy = () => {
-    const orig = btn.textContent;
-    btn.textContent = '✅ Copied! WAGMI 🚀';
-    btn.classList.add('copied');
-    launchConfetti();
-    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 3000);
-  };
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(addr).then(doCopy).catch(() => fallbackCopy(addr, doCopy));
-  } else {
-    fallbackCopy(addr, doCopy);
-  }
-}
-
-function fallbackCopy(text, callback) {
-  const ta = document.createElement('textarea');
-  ta.value = text;
-  ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;';
-  document.body.appendChild(ta);
-  ta.focus(); ta.select();
-  try { document.execCommand('copy'); callback(); } catch(e) { alert('Copy failed — please select and copy manually.'); }
-  document.body.removeChild(ta);
-}
-
-function copyPageLink(btn) {
-  const orig = btn.textContent;
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(window.location.href).then(() => {
-      btn.textContent = '✅ Link Copied!';
-      setTimeout(() => { btn.textContent = orig; }, 2500);
-    });
-  }
-}
-
-// ─── CONFETTI ──────────────────────────────────────────────────────────────────
-function launchConfetti() {
-  const canvas = document.getElementById('confetti-canvas');
-  canvas.style.display = 'block';
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  const emojis = ['💸','🚀','🎉','💎','🌕','✨','🤑','🎊','🔥','💫'];
-  const particles = Array.from({length:60}, () => ({
-    x: Math.random() * canvas.width, y: -50,
-    emoji: emojis[Math.floor(Math.random() * emojis.length)],
-    speed: 2 + Math.random() * 4, rot: Math.random() * 360,
-    rotSpeed: (Math.random() - 0.5) * 6, size: 20 + Math.random() * 24,
-    vx: (Math.random() - 0.5) * 3
-  }));
-  let frame = 0;
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-      p.y += p.speed; p.x += p.vx; p.rot += p.rotSpeed;
-      ctx.save();
-      ctx.translate(p.x, p.y);
-      ctx.rotate(p.rot * Math.PI / 180);
-      ctx.font = `${p.size}px serif`;
-      ctx.textAlign = 'center';
-      ctx.fillText(p.emoji, 0, 0);
-      ctx.restore();
-    });
-    frame++;
-    if (frame < 120) requestAnimationFrame(animate);
-    else { ctx.clearRect(0, 0, canvas.width, canvas.height); canvas.style.display = 'none'; }
-  }
-  animate();
-}
-
-// ─── SCROLL REVEALS ────────────────────────────────────────────────────────────
-const cards = document.querySelectorAll('.toko-card, .ta-card, .rm-card, .team-card, .stat-pill, .math-card, .ce-card');
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
-  });
-}, { threshold: 0.1 });
-cards.forEach(card => {
-  card.style.opacity = '0';
-  card.style.transform = 'translateY(20px)';
-  card.style.transition = 'opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s, border-color 0.25s';
-  obs.observe(card);
-});
-</script>
+    console.log('%c✅ $ZEROTH live fetching active — replace the placeholder keys and deploy!', 'color:lime; font-size:16px');
+  </script>
 </body>
 </html>
