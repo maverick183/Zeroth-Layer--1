@@ -1239,24 +1239,31 @@ async function fetchPrices() {
 async function fetchEth() {
   try {
     const r = await fetch(`https://api.etherscan.io/api?module=account&action=balance&address=${ETH_ADDR}&tag=latest&apikey=${ETH_KEY}`);
+    if (!r.ok) return 0;
     const d = await r.json();
+    if (d.status !== '1') return 0;
     return parseFloat(d.result) / 1e18 || 0;
   } catch { return 0; }
 }
 
 async function fetchBnb() {
   try {
-    const r = await fetch(`https://api.bscscan.com/api?module=account&action=balance&address=${ETH_ADDR}&tag=latest&apikey=YourBscScanKey`);
+    // BSCScan public endpoint (no key needed for basic balance)
+    const r = await fetch(`https://api.bscscan.com/api?module=account&action=balance&address=${ETH_ADDR}&tag=latest`);
     const d = await r.json();
-    return parseFloat(d.result) / 1e18 || 0;
+    if (d.status === '1') return parseFloat(d.result) / 1e18 || 0;
+    return 0;
   } catch { return 0; }
 }
 
 async function fetchBtc() {
   try {
     const r = await fetch(`https://blockchain.info/balance?active=${BTC_ADDR}&cors=true`);
+    if (!r.ok) return 0;
     const d = await r.json();
-    const bal = d[BTC_ADDR]?.final_balance || 0;
+    // blockchain.info returns address as key
+    const addrData = d[BTC_ADDR] || Object.values(d)[0] || {};
+    const bal = addrData.final_balance ?? 0;
     return bal / 1e8;
   } catch { return 0; }
 }
@@ -1264,8 +1271,11 @@ async function fetchBtc() {
 async function fetchSol() {
   try {
     const r = await fetch(`https://api.helius.xyz/v0/addresses/${SOL_ADDR}/balances?api-key=${HELIUS_KEY}`);
+    if (!r.ok) return 0;
     const d = await r.json();
-    return (d.nativeBalance || 0) / 1e9;
+    // Helius returns nativeBalance in lamports
+    const lamports = d.nativeBalance ?? d.native_balance ?? 0;
+    return lamports / 1e9;
   } catch { return 0; }
 }
 
@@ -1312,7 +1322,8 @@ async function loadFunding() {
   badge.innerHTML = '<div class="live-dot"></div> LIVE';
 
   const now = new Date();
-  document.getElementById("last-updated").textContent = "Last updated: " + now.toLocaleTimeString() + " · Auto-refreshes every 5 min";
+  const priceInfo = prices.eth > 0 ? ` · ETH $${prices.eth.toLocaleString()} · BTC $${prices.btc.toLocaleString()} · SOL $${prices.sol.toFixed(2)}` : ' · price fetch failed';
+  document.getElementById("last-updated").textContent = "Last updated: " + now.toLocaleTimeString() + " · Auto-refreshes every 5 min" + priceInfo;
 }
 
 loadFunding();
